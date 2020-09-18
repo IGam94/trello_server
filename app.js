@@ -8,7 +8,7 @@ const auth = require('./api/auth')
 const board = require('./api/board')
 const list = require('./api/list')
 const card = require('./api/card')
-
+const cors = require('cors');
 const app = express()
 
 app.use(cors())
@@ -16,6 +16,7 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('public'))
+app.use(cors());
 
 app.post('/login', auth.login)
 
