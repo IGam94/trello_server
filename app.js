@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const cors = require('cors')
-
+const serverless = require('serverless-http');
 const authService = require('./auth')
 const auth = require('./api/auth')
 const board = require('./api/board')
@@ -52,4 +52,4 @@ app.use((err, req, res, next) => {
   res.json({ error: err.message || 'internal server error' })
 })
 
-module.exports = app
+module.exports.handler = serverless(app);
