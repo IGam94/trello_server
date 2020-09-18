@@ -51,5 +51,7 @@ app.use((err, req, res, next) => {
   res.status(res.statusCode || 500)
   res.json({ error: err.message || 'internal server error' })
 })
+  // path must route to lambda
 
+module.exports = app;
 module.exports.handler = serverless(app);

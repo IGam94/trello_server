@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "build": "netlify-lambda build express"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +17,10 @@
     "jsonwebtoken": "^8.2.2",
     "morgan": "^1.9.0",
     "sequelize": "^4.37.10",
-    "serverless-http": "^2.6.0"
+    "serverless-http": "^2.6.0",
+    "netlify-lambda": "^1.6.3",
+    "sqlite3": "latest",
+    "nodemon": "^1.17.5"
   },
-  "devDependencies": {
-    "nodemon": "^1.17.5",
-    "sqlite3": "^4.0.2"
-  }
+  "devDependencies": {}
 }
